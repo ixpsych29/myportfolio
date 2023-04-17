@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Abdullah</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" alt="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Front-end Developer</p>
+          <h1>
+            Hi, I'm <br />
+            <span> Muhammad Abdullah </span> <br />
+            from PUCIT
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------About------- -->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" alt="user" />
+          </div>
+          <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+          <div class="about-col-2">
+            <h1>About Me</h1>
+            <p>
+              A computer Scientist and a Frontend focused Web developer, skilled
+              in HTML5, CSS3, JavaScript, BootStrap, and SCSS, making
+              significant inroads in ReactJS.
+            </p>
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="openTab('education')">
+                Education
+              </p>
+              <p class="tab-links" onclick="openTab('services')">Services</p>
+              <p class="tab-links" onclick="openTab('skills')">Skills</p>
+            </div>
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+            <div class="tab-contents active-tab" id="education">
+              <ul>
+                <li><span>2019-23</span><br />BSSE from PU-FCIT New Campus</li>
+                <li>
+                  <span>2017-19</span><br />FSc. Pre-Engineering from Aspire
+                  Group of Colleges
+                </li>
+                <li>
+                  <span>2015-17</span><br />Matriculation from Falcon Cambridge
+                  Model Higher School
+                </li>
+              </ul>
+            </div>
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+            <div class="tab-contents" id="services">
+              <ul>
+                <li>
+                  <span>Web Development</span><br />Making Attractive, Easy to
+                  use and Functional Websites.
+                </li>
+                <li>
+                  <span>Programming</span><br />Programming for different
+                  projects in JS, Python, Java & C++.
+                </li>
+                <li>
+                  <span>Teaching</span><br />Teaching Science Majors at
+                  Matriculation and Intermediate level.
+                </li>
+              </ul>
+            </div>
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+            <div class="tab-contents" id="skills">
+              <ul>
+                Will be written soon. ❤️😊
+              </ul>
+            </div>
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------Services------- -->
+    <div id="services">
+      
+    </div>
+
+    <!-- --------JavaScript------- -->
+    <script>
+      var tabLinks = document.getElementsByClassName("tab-links");
+      var tabContents = document.getElementsByClassName("tab-contents");
+
+      function openTab(tabName) {
+        for (tabLink of tabLinks) {
+          tabLink.classList.remove("active-link");
+        }
+        for (tabContent of tabContents) {
+          tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
